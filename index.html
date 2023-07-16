@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="highscores.html">View High Scores</a>
+      <div id="timer">Time:60</div>
+    </header>
+    <div id="start-container">
+      <h1>Timed Coding Quiz</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
+        magnam dolorum itaque distinctio reiciendis ab sapiente aliquam fugiat
+        eaque earum, placeat amet facere alias illum assumenda! Explicabo
+        dolores officiis sed?
+      </p>
+      <button id="start-quiz">Start Quiz</button>
+    </div>
+    <div id="question-container" class="hide">
+      <h2>What</h2>
+      <div id="button-zone"></div>
+      <button class="btn"></button>
+      <button class="btn"></button>
+      <button class="btn"></button>
+      <button class="btn"></button>
+    </div>
+    <div id="end-container" class="hide">
+      <h2>All Done</h2>
+      <p>Your Final Score is: <span id="final-score"></span></p>
+      <p>Enter Intials: <input type="text" id="intials" max="3" /></p>
+      <button id="submit-button">Submit</button>
+    </div>
+  </body>
+</html>
