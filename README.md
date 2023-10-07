@@ -10,3 +10,5 @@ WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
+
+I created an html page that woould hide questions until one was asked. Then would have a timer display and have them lose time when they get an answer incorrect. 
