@@ -1,4 +1,6 @@
 # Timed-Coding-Quiz
+
+# User Story
 GIVEN I am taking a code quiz
 WHEN I click the start button
 THEN a timer starts and I am presented with a question
@@ -11,4 +13,7 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 
-I created an html page that woould hide questions until one was asked. Then would have a timer display and have them lose time when they get an answer incorrect. 
+# Description 
+This assingment focused on making a timed coding quiz that would have userss answer questions related to coding. If they get one wrong time would be subtracted from the clock until time expires. User is then prompted with saving intiials and score. I used stack overflow along with Chat GPT as resources to hep me as I got stuck. 
+https://chat.openai.com/ 
+https://stackoverflow.com/

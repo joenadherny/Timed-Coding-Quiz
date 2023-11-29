@@ -1,62 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <a href="highscores.html">View High Scores</a>
-      <div id="timer">Time:60</div>
-    </header>
-    <div id="start-container">
-      <h1>Timed Coding Quiz</h1>
-      <p>
-     
-      </p>
-      <button id="start-quiz">Start Quiz</button>
-    </div>
-    <div id="question-container" class="hide">
-      <h2 id= "question-text">What symbol do you use to select an id?</h2>
-      <div id="button-zone"></div>
-      <button class="btn">You use a .</button>
-      <button class="btn">You use a %</button>
-      <button class="btn">You use a #</button>
-      <button class="btn"> You use a @</button>
-    </div>
-    <div id="question-container" class="hide">
-      <h3 id= "question-text">What language is used primarly for styling?</h3>
-      <div id="button-zone"></div>
-      <button class="btn">CSS</button>
-      <button class="btn">Java</button>
-      <button class="btn">Node</button>
-      <button class="btn"> HTML</button>
-    </div>
-    <div id="question-container" class="hide">
-      <h4 id= "question-text">What command do you use to update your repo?</h4>
-      <div id="button-zone"></div>
-      <button class="btn">git pull</button>
-      <button class="btn">git push</button>
-      <button class="btn">git commit </button>
-      <button class="btn"> git status</button>
-    </div>
-    <div id="question-container" class="hide">
-      <h5 id= "question-text">How do you check what branch you are on ?</h5>
-      <div id="button-zone"></div>
-      <button class="btn">git status</button>
-      <button class="btn">git push</button>
-      <button class="btn">git commit</button>
-      <button class="btn"> git pull</button>
-    </div>
-    <div id="end-container" class="hide">
-      <h2>All Done</h2>
-      <p>Your Final Score is: <span id="final-score"></span></p>
-      <p>Enter Intials: <input type="text" id="intials" max="3" /></p>
-      <button id="submit-button">Submit</button>
-    </div>
-  </body>
-  <script src="script.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="highscores.html">View High Scores</a>
+    <div id="timer">Time: <span id="timer-value">60</span></div>
+  </header>
+  <div id="start-container">
+    <h1>Timed Coding Quiz</h1>
+    <p></p>
+    <button id="start-quiz">Start Quiz</button>
+  </div>
+  <div id="question-container" class="hide">
+    <h2 id="question-text"></h2>
+    <div id="button-zone"></div>
+  </div>
+  <div id="end-container" class="hide">
+    <h2>All Done</h2>
+    <p>Your Final Score is: <span id="final-score"></span></p>
+    <p>Enter Initials: <input type="text" id="initials" maxlength="3" /></p>
+    <button id="submit-button">Submit</button>
+  </div>
+</body>
+<script src="script.js"></script>
 </html>
+
