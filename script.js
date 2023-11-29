@@ -11,86 +11,85 @@ var timeLeft = 60;
 var timerId;
 
 const questions = [
- 
   {
-    question: "Which of the following is a programming language?",
+    question: "In JavaScript, what is a closure?",
     answers: [
+      { text: "A function with no parameters", correct: false },
+      { text: "A way to lock variables", correct: false },
+      { text: "A combination of a function and the lexical environment within which that function was declared", correct: true },
+      { text: "A loop that never ends", correct: false }
+    ]
+  },
+  {
+    question: "Which of the following is a CSS preprocessor?",
+    answers: [
+      { text: "JavaScript", correct: false },
       { text: "HTML", correct: false },
-      { text: "CSS", correct: false },
-      { text: "Python", correct: true },
-      { text: "URL", correct: false }
+      { text: "Sass", correct: true },
+      { text: "Python", correct: false }
     ]
   },
   {
-    question: "What does CSS stand for?",
+    question: "What does HTML stand for?",
     answers: [
-      { text: "Counter Strike: Source", correct: false },
-      { text: "Corrective Style Sheet", correct: false },
-      { text: "Computer Style Sheet", correct: false },
-      { text: "Cascading Style Sheet", correct: true }
+      { text: "HyperText Markup Language", correct: true },
+      { text: "High-Level Text Manipulation Language", correct: false },
+      { text: "Hyperlink and Text Markup Language", correct: false },
+      { text: "Home Tool Markup Language", correct: false }
     ]
   },
   {
-    question: "Which of the following is not a JavaScript framework or library?",
+    question: "What is the purpose of the 'git clone' command in Git?",
     answers: [
-      { text: "React", correct: false },
-      { text: "Angular", correct: false },
-      { text: "JavaSpring", correct: true },
-      { text: "Vue", correct: false }
-    ]
-  },
-  {
-    question: "What is the result of the expression: 2 + 2 * 2?",
-    answers: [
-      { text: "4", correct: false },
-      { text: "6", correct: true },
-      { text: "8", correct: false },
-      { text: "10", correct: false }
-    ]
-  },
-  {
-    question: "Which of the following is used to declare a variable in JavaScript?",
-    answers: [
-      { text: "var", correct: true },
-      { text: "let", correct: false },
-      { text: "const", correct: false },
-      { text: "both let and const", correct: false }
-    ]
-  },
-  {
-    question: "What is the purpose of the 'git clone' command?",
-    answers: [
-      { text: "To push changes to a remote repository", correct: false },
       { text: "To create a new branch", correct: false },
-      { text: "To copy a repository from the internet to your computer", correct: true },
-      { text: "To delete a repository", correct: false }
+      { text: "To copy a repository to a new location", correct: true },
+      { text: "To delete a branch", correct: false },
+      { text: "To merge two branches", correct: false }
     ]
   },
   {
-    question: "Which of the following is an example of a block-level element in HTML?",
+    question: "What does the acronym 'API' stand for?",
     answers: [
-      { text: "<span>", correct: false },
-      { text: "<a>", correct: false },
-      { text: "<div>", correct: true },
-      { text: "<strong>", correct: false }
-    ]
-  },
-  {
-    question: "What does API stand for?",
-    answers: [
-      { text: "Application Programming Interface", correct: true },
-      { text: "Automated Programming Integration", correct: false },
       { text: "Advanced Programming Interface", correct: false },
-      { text: "Application Process Integration", correct: false }
+      { text: "Application Programming Interface", correct: true },
+      { text: "Automated Program Interaction", correct: false },
+      { text: "All-Purpose Integration", correct: false }
     ]
   },
   {
-    question: "Which of the following is not a valid data type in JavaScript?",
+    question: "In which programming language is React.js primarily written?",
     answers: [
-      { text: "string", correct: false },
-      { text: "boolean", correct: false },
-      { text: "numeric", correct: true },
-      { text: "object", correct: false }
+      { text: "Java", correct: false },
+      { text: "Python", correct: false },
+      { text: "JavaScript", correct: true },
+      { text: "Ruby", correct: false }
+    ]
+  },
+  {
+    question: "What is the purpose of the 'addEventListener' method in JavaScript?",
+    answers: [
+      { text: "To remove an event listener", correct: false },
+      { text: "To add an event listener to an HTML element", correct: true },
+      { text: "To create a new event", correct: false },
+      { text: "To execute an event immediately", correct: false }
+    ]
+  },
+  {
+    question: "Which of the following is NOT a valid data type in JavaScript?",
+    answers: [
+      { text: "String", correct: false },
+      { text: "Boolean", correct: false },
+      { text: "Float", correct: true },
+      { text: "Number", correct: false }
+    ]
+  },
+  {
+    question: "What is the purpose of the 'box-sizing' property in CSS?",
+    answers: [
+      { text: "To set the size of a text box", correct: false },
+      { text: "To specify the type of box model to be used for an element", correct: true },
+      { text: "To add a border to a box", correct: false },
+      { text: "To define the padding of an element", correct: false }
     ]
   }
 ];
@@ -182,39 +181,9 @@ function saveScore(event) {
   event.preventDefault();
   const initials = initialsInput.value;
   const score = timeLeft;
-  // Save your score logic here...
-}
-// Function to save high score to local storage
-function saveHighScore(initials, score) {
-  // Retrieve existing high scores from local storage
-  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-
-  // Add the new high score
-  highScores.push({ initials, score });
-
-  // Sort high scores in descending order
-  highScores.sort((a, b) => b.score - a.score);
-
-  // Save the updated high scores to local storage
-  localStorage.setItem('highScores', JSON.stringify(highScores));
+  
 }
 
-// Function to display high scores on the page
-function displayHighScores() {
-  const highScoreList = document.getElementById('high-score-list');
-  highScoreList.innerHTML = '';
 
-  // Retrieve high scores from local storage
-  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
-  // Display each high score in the list
-  highScores.forEach((score, index) => {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${index + 1}. ${score.initials}: ${score.score}`;
-    highScoreList.appendChild(listItem);
-  });
-}
-
-// Call the function to display high scores when the page loads
-displayHighScores();
 
